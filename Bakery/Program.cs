@@ -9,12 +9,15 @@ namespace Bakery
     static void Main()
     {
       Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-      Console.WriteLine("Welcome to your Bakery!");
-      Console.WriteLine("Each bread loaf is $5, and every third loaf is free");
-      Console.WriteLine("Each pastry is $2, and every fourth loaf is free");
-      Console.WriteLine("How many pastries would you like?");
+      Console.WriteLine("Welcome to Pierre's Bakery!");
+      Console.WriteLine("Each bread loaf is $5"); 
+      Console.WriteLine("__buy two, get one free!");
+      Console.WriteLine("Each pastry is $2");
+      Console.WriteLine("__buy four, get one free!");
+      Console.WriteLine("_________________________________");
+      Console.WriteLine("How many pastries for you?");
       string pastryString = Console.ReadLine();
-      Console.WriteLine("How many loaves of bread would you like?");
+      Console.WriteLine("How many loaves of bread for you?");
       string breadString = Console.ReadLine();
 
       try
@@ -26,7 +29,7 @@ namespace Bakery
 
         string answer = Console.ReadLine();
 
-        if (answer.ToLower() == "yes") 
+        if (answer.ToLower() == "yes" || answer.ToLower() == "y") 
         {
           Main();
         }
@@ -50,7 +53,7 @@ namespace Bakery
       int paTot = pastryNum.PriceTotalP();
       int total =  brTot + paTot;
 
-      Console.WriteLine($"Let's see, it will cost {brTot} for the bread and {paTot} for the pastry so....");
+      Console.WriteLine($"Let's see, for {userInputBread} loaves of bread it will cost {brTot} and for {userInputPastry} pastries it will cost {paTot} so....");
       Console.WriteLine($"That will be {total} dollars s'il vous plaît");
     }
   }
