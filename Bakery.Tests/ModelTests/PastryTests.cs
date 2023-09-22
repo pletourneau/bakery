@@ -24,5 +24,18 @@ namespace Bakery.Tests
       //assert
       Assert.AreEqual(expPrice, actualPrice);
     }
+
+    [TestMethod]
+    public void PriceTotalP_FindsTotalPricePWithDiscount_Int()
+    {
+      //arrange
+      int userInputPastry = 8;
+      int expPrice = 12;
+      //act
+      Pastry newPastry = new Pastry(userInputPastry);
+      int actualPrice = newPastry.PriceTotalP();
+      //assert
+      Assert.AreEqual(expPrice, actualPrice);
+    }
   }
 }
