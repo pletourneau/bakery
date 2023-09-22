@@ -9,5 +9,10 @@ namespace Bakery.Models
     {
       PastryNum = userInputPastry;
     }
+
+    public int PriceTotal()
+    {
+     
+    }
   }
 }  
