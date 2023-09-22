@@ -13,7 +13,7 @@ namespace Bakery.Models
 
     public int PriceTotal()
     {
-      int tot = (this.LoafNum * 5) - (this.LoafNum / 3);
+      int tot = (this.LoafNum * 5) - ((this.LoafNum / 3)*5);
       return tot;
     }
   }
