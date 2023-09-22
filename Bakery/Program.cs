@@ -1,7 +1,14 @@
-class Program
+using System;
+using System.Collections.Generic;
+using ShapeTracker.Models;
+
+namespace Bakery
 {
-  static void Main()
+  class Program
   {
-    // We'll add user interface code here.
+    static void Main()
+    {
+      // We'll add user interface code here.
+    }
   }
 }
