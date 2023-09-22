@@ -40,4 +40,3 @@ namespace Bakery.Tests
     }
   }
 }
-// NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

@@ -17,15 +17,26 @@ namespace Bakery
       Console.WriteLine("How many loaves of bread would you like?");
       string breadString = Console.ReadLine();
 
-      int userInputBread = int.Parse(breadString);
-      int userInputPastry = int.Parse(pastryString);
+      try
+      {
+        int userInputBread = int.Parse(breadString);
+        int userInputPastry = int.Parse(pastryString);
+        CalcPrice(userInputBread, userInputPastry);
+      }
+      catch
+      {
+        Console.WriteLine("Please enter a valid integer. I can only calculate up to about 2 billion dollars, so if you more than that please call instead.");
+        Main();
+      }
+    }
+    static void CalcPrice(int userInputBread, int userInputPastry)
+    {
+      Pastry pastryNum = new Pastry (userInputPastry);
+      Bread breadNum = new Bread (userInputBread);
 
-      Pastry pastryPrice = new(userInputPastry);
-      Bread breadPrice = new(userInputBread);
-
-      int total = breadPrice.PriceTotal() + pastryPrice.PriceTotalP();
-      Console.WriteLine($"I am French so I am better than you {total}");
-      // Console.WriteLine($"did you want {userInputBread} loaf/loaves?");
+      int total = breadNum.PriceTotal() + pastryNum.PriceTotalP();
+      Console.WriteLine($"That will be {total} dollars you uncultured swine");
+    
     }
   }
 }
