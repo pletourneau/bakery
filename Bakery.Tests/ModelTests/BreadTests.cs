@@ -17,10 +17,10 @@ namespace Bakery.Tests
     public void PriceTotal_FindsTotalPrice_Int()
     {
       //arrange
-      int userInput = 2;
+      int userInputBread = 2;
       int expPrice = 10;
       //act
-      Bread newBread = new Bread(userInput);
+      Bread newBread = new Bread(userInputBread);
       int actualPrice = newBread.PriceTotal();
       //assert
       Assert.AreEqual(expPrice, actualPrice);
@@ -30,15 +30,14 @@ namespace Bakery.Tests
     public void PriceTotal_FindsTotalPriceWithDiscount_Int()
     {
       //arrange
-      int userInput = 6;
-      int expPrice = 20;
+      int userInputBread = 4;
+      int expPrice = 15;
       //act
-      Bread newBread = new Bread(userInput);
+      Bread newBread = new Bread(userInputBread);
       int actualPrice = newBread.PriceTotal();
       //assert
       Assert.AreEqual(expPrice, actualPrice);
     }
-    
   }
 }
 // NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()

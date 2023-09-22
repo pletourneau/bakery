@@ -6,9 +6,9 @@ namespace Bakery.Models
   {
     public int LoafNum {get; set;}
 
-     public Bread(int userInput)
+    public Bread(int userInputBread)
     {
-      LoafNum = userInput;
+      LoafNum = userInputBread;
     }
 
     public int PriceTotal()
