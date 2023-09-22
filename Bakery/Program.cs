@@ -19,7 +19,13 @@ namespace Bakery
 
       int userInputBread = int.Parse(breadString);
       int userInputPastry = int.Parse(pastryString);
-      Console.WriteLine($"did you want {userInputBread} loaf/loaves?");
+
+      Pastry pastryPrice = new(userInputPastry);
+      Bread breadPrice = new(userInputBread);
+
+      int total = breadPrice.PriceTotal() + pastryPrice.PriceTotalP();
+      Console.WriteLine($"I am French so I am better than you {total}");
+      // Console.WriteLine($"did you want {userInputBread} loaf/loaves?");
     }
   }
 }
