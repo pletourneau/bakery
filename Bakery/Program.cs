@@ -22,6 +22,18 @@ namespace Bakery
         int userInputBread = int.Parse(breadString);
         int userInputPastry = int.Parse(pastryString);
         CalcPrice(userInputBread, userInputPastry);
+        Console.WriteLine("Would you like to price out another order? Type yes to start another order");
+
+        string answer = Console.ReadLine();
+
+        if (answer.ToLower() == "yes") 
+        {
+          Main();
+        }
+        else
+        {
+          Console.WriteLine("Au revoir mon ami");
+        }
       }
       catch
       {
