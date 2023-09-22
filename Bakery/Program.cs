@@ -8,7 +8,9 @@ namespace Bakery
   {
     static void Main()
     {
-      // We'll add user interface code here.
+      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+      Console.WriteLine("Welcome to your Bakery!");
+      Console.WriteLine("How many pastries and loaves of bread would you like?");
     }
   }
 }
