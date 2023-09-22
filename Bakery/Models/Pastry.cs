@@ -10,9 +10,10 @@ namespace Bakery.Models
       PastryNum = userInputPastry;
     }
 
-    public int PriceTotal()
+    public int PriceTotalP()
     {
-     
+      int totP = (this.PastryNum * 2) - ((this.PastryNum / 4)*2);
+      return totP;
     }
   }
 }  
