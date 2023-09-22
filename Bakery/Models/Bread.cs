@@ -6,9 +6,15 @@ namespace Bakery.Models
   {
     public int LoafNum {get; set;}
 
-     public Bread(int numOfLoaf)
+     public Bread(int userInput)
     {
-      LoafNum = numOfLoaf;
+      LoafNum = userInput;
+    }
+
+    public int PriceTotal()
+    {
+      int tot = (this.LoafNum * 5) - (this.LoafNum / 3);
+      return tot;
     }
   }
 }
