@@ -34,9 +34,12 @@ namespace Bakery
       Pastry pastryNum = new Pastry (userInputPastry);
       Bread breadNum = new Bread (userInputBread);
 
-      int total = breadNum.PriceTotal() + pastryNum.PriceTotalP();
-      Console.WriteLine($"That will be {total} dollars you uncultured swine");
-    
+      int brTot = breadNum.PriceTotal();
+      int paTot = pastryNum.PriceTotalP();
+      int total =  brTot + paTot;
+
+      Console.WriteLine($"Let's see, it will cost {brTot} for the bread and {paTot} for the pastry so....");
+      Console.WriteLine($"That will be {total} dollars s'il vous plaît");
     }
   }
 }
